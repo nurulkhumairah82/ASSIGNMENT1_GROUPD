@@ -41,3 +41,34 @@ def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[s
         group_states.append(all_states[idx])
         
     return group_states
+
+def validate_records(records: list[dict], required_keys: tuple[str, ...]) -> None:
+    """
+    Menyemak dan memastikan rekod data lengkap dan sah.
+    Owner: Role 1 (Data Steward). Reviewed by: Role 2 (Structures Engineer).
+    """
+    # 1. Semak sama ada records ialah list
+    if not isinstance(records, list):
+        raise TypeError("Ralat: Data records mestilah dalam bentuk senarai (list).")
+    
+    # 2. Semak jika records kosong
+    if len(records) == 0:
+        raise ValueError("Ralat: Data records tidak boleh kosong.")
+    
+    seen_keys = set()
+    
+    for rec in records:
+        # 3. Semak jika ada item yang bukan dictionary (dict)
+        if not isinstance(rec, dict):
+            raise TypeError("Ralat: Setiap rekod di dalam records mestilah berbentuk kamus (dict).")
+        
+        # 4. Semak jika ada kunci wajib (required_keys) yang hilang
+        for key in required_keys:
+            if key not in rec:
+                raise KeyError(f"Ralat: Rekod kehilangan kunci wajib '{key}'.")
+        
+        # 5. Semak jika ada rekod bertindih/pendua bagi (state, date)
+        state_date = (rec.get("state"), rec.get("date"))
+        if state_date in seen_keys:
+            raise ValueError(f"Ralat: Rekod bertindih (pendua) dijumpai untuk: {state_date}")
+        seen_keys.add(state_date)
