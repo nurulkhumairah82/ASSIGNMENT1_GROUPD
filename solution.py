@@ -41,7 +41,7 @@ def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[s
         group_states.append(all_states[idx])
         
     return group_states
-
+#Task 1
 def validate_records(records: list[dict], required_keys: tuple[str, ...]) -> None:
     """
     Menyemak dan memastikan rekod data lengkap dan sah.
