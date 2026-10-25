@@ -72,3 +72,58 @@ def validate_records(records: list[dict], required_keys: tuple[str, ...]) -> Non
         if state_date in seen_keys:
             raise ValueError(f"Ralat: Rekod bertindih (pendua) dijumpai untuk: {state_date}")
         seen_keys.add(state_date)
+#Task 2        
+import numpy as np
+
+def to_float(value) -> float:
+    """
+    Menukar nilai kepada float, dan mengembalikan np.nan jika None.
+    Owner: Role 2. Reviewed by: Role 1.
+    """
+    if value is None:
+        return np.nan
+    return float(value)
+
+
+def index_by_key(records: list[dict]) -> dict:
+    """
+    Mengembalikan dictionary berkunci (state, year) daripada senarai rekod.
+    Owner: Role 2. Reviewed by: Role 1.
+    """
+    indexed = {}
+    for record in records:
+        state = record["state"]
+        year = int(record["date"][:4]) # Ambil 4 huruf pertama tarikh sebagai tahun
+        key = (state, year)
+        
+        if key in indexed:
+            raise ValueError(f"Ralat: Kunci bertindih (duplicate key) ditemui untuk {key}")
+        indexed[key] = record
+        
+    return indexed
+
+
+def join_records(income_records: list[dict], poverty_records: list[dict]):
+    """
+    Memadankan rekod pendapatan dan kemiskinan mengikut kunci (state, year).
+    Owner: Role 2. Reviewed by: Role 1.
+    """
+    income_indexed = index_by_key(income_records)
+    poverty_indexed = index_by_key(poverty_records)
+    
+    income_keys = set(income_indexed.keys())
+    poverty_keys = set(poverty_indexed.keys())
+    
+    common_keys = income_keys.intersection(poverty_keys)
+    income_only = income_keys - poverty_keys
+    poverty_only = poverty_keys - income_keys
+    
+    joined = []
+    for key in common_keys:
+        inc = income_indexed[key]
+        pov = poverty_indexed[key]
+        # Gabungkan data pendapatan dan kemiskinan
+        combined = {**inc, **pov}
+        joined.append(combined)
+        
+    return joined, income_only, poverty_only
