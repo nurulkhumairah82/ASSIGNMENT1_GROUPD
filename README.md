@@ -12,7 +12,7 @@ Group ID: A1-GROUPD
 | Member 2 | 311294 | Role  -  | W.P. Labuan |
 | Nurul Khumairah Bt Sawlihim | 311397 | Role 5 - Intergration and Test Lead | Pahang |
 | Member 4 | 312114 | Role  -  | Kelantan |
-| Member 5 | 313429 | Role  -  | Perak 
+| Nur Naajiya Binti Mohd Fauzi | 313429 | Role 3 - Matrix Analyst A  | Perak 
 
 ---
 
