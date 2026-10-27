@@ -23,7 +23,7 @@ REGIONS = {
     "East Malaysia": ["Sabah", "Sarawak", "W.P. Labuan"],
 }
 
-# 5. Fungsi pengira matrik (yang anda tanya tadi - tak perlu ubah apa-apa dalam ni)
+# 5. Fungsi pengira matrik
 def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[str]:
     """
     Owner: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward) Reviewed by: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer)
