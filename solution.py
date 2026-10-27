@@ -26,7 +26,7 @@ REGIONS = {
 # 5. Fungsi pengira matrik (yang anda tanya tadi - tak perlu ubah apa-apa dalam ni)
 def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[str]:
     """
-    Owner: Role 1. Reviewed by: Role 2.
+    Owner: Siti Nurin Saffiyah Binti Abd Samad (Role 1) Reviewed by: Nur Dayana Anis Binti Azhar (Role 2)
     """
     sorted_matrics = sorted(matric_numbers)
     group_states = []
