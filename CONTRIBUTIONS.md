@@ -1,6 +1,6 @@
 ## Member 1
 
-Name: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward)
+Name: Siti Nurin Saffiyah Binti Abd Samad 
 
 Role: Data Steward (Role 1)
 
