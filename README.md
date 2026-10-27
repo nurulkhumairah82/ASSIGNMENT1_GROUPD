@@ -8,10 +8,10 @@ Group ID: A1-GROUPD
 
 | Name | Matric Number | Role | Focus State |
 |--------|--------|--------|--------|
-| Nur Dayana Anis Binti Azhar| 311279 | Role 2 -  | W.P. Putrajaya |
-| Nurul Najwa Binti Mustafa | 311294 | Role 4 -  | W.P. Labuan |
+| Nur Dayana Anis Binti Azhar| 311279 | Role 2 - Structures engineer | W.P. Putrajaya |
+| Nurul Najwa Binti Mustafa | 311294 | Role 4 - Matrix Analyst B  | W.P. Labuan |
 | Nurul Khumairah Bt Sawlihim | 311397 | Role 5 - Intergration and Test Lead | Pahang |
-| Siti Nurin Saffiyah Binti Abd Samad| 312114 | Role 1 -  | Kelantan |
+| Siti Nurin Saffiyah Binti Abd Samad| 312114 | Role 1 -  Data steward  | Kelantan |
 | Nur Naajiya Binti Mohd Fauzi | 313429 | Role 3 - Matrix Analyst A  | Perak 
 
 ---
