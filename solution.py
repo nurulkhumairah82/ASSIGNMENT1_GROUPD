@@ -26,7 +26,7 @@ REGIONS = {
 # 5. Fungsi pengira matrik (yang anda tanya tadi - tak perlu ubah apa-apa dalam ni)
 def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[str]:
     """
-    Owner: Siti Nurin Saffiyah Binti Abd Samad (Role 1) Reviewed by: Nur Dayana Anis Binti Azhar (Role 2)
+    Owner: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward) Reviewed by: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer)
     """
     sorted_matrics = sorted(matric_numbers)
     group_states = []
@@ -45,7 +45,7 @@ def get_group_states(matric_numbers: list[int], all_states: list[str]) -> list[s
 def validate_records(records: list[dict], required_keys: tuple[str, ...]) -> None:
     """
     Menyemak dan memastikan rekod data lengkap dan sah.
-    Owner: Role 1 (Data Steward). Reviewed by: Role 2 (Structures Engineer).
+    Owner: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward) Reviewed by: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer)
     """
     # 1. Semak sama ada records ialah list
     if not isinstance(records, list):
@@ -78,7 +78,7 @@ import numpy as np
 def to_float(value) -> float:
     """
     Menukar nilai kepada float, dan mengembalikan np.nan jika None.
-    Owner: Role 2. Reviewed by: Role 1.
+    Owner: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer) Reviewed by: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward)
     """
     if value is None:
         return np.nan
@@ -88,7 +88,7 @@ def to_float(value) -> float:
 def index_by_key(records: list[dict]) -> dict:
     """
     Mengembalikan dictionary berkunci (state, year) daripada senarai rekod.
-    Owner: Role 2. Reviewed by: Role 1.
+    Owner: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer) Reviewed by: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward)
     """
     indexed = {}
     for record in records:
@@ -106,7 +106,7 @@ def index_by_key(records: list[dict]) -> dict:
 def join_records(income_records: list[dict], poverty_records: list[dict]):
     """
     Memadankan rekod pendapatan dan kemiskinan mengikut kunci (state, year).
-    Owner: Role 2. Reviewed by: Role 1.
+    Owner: Nur Dayana Anis Binti Azhar (Role 2-Structures Engineer) Reviewed by: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward)
     """
     income_indexed = index_by_key(income_records)
     poverty_indexed = index_by_key(poverty_records)
