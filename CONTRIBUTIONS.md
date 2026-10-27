@@ -1,34 +1,50 @@
 ## Member 1
 
-Name: 
+Name: Siti Nurin Saffiyah Binti Abd Samad (Role 1-Data Steward)
 
-Role:
+Role: Data Steward (Role 1)
 
 Owned:
+- Task 1
+- Task 3
 
-Reviewed: 
+Reviewed:
+- Task 2
 
 Issue found:
+Resolved dictionary key extraction ('records') for raw JSON files and verified zero missing data points.
 
 ---
 
 ## Member 2
 
-Name: 
+Name: Nur Dayana Anis Binti Azhar
 
-Role:
+Role: Structures Engineer (Role 2)
 
-Owned:
+Owned: 
+- Task 2
 
-Reviewed: 
+Reviewed:
+- Task 1
+- Task 3
 
 Issue found:
+- Mismatched Survey Years
+Issue: Income and poverty datasets have different survey timelines.
+Resolution: Merged only on matching survey years using (state, date) as the key.
+- Nested JSON Structure
+Issue: Raw files loaded as a dictionary instead of a list.
+Resolution: Extracted the data directly from the "records" key.
+- Data Type Differences
+Issue: Dates were stored as text, and some older records contained None values.
+Resolution: Converted dates to year integers and cleaned missing values.
 
 ---
 
 ## Member 3
 
-Name: Nur Naajiya
+Name: Nur Naajiya Binti Mohd Fauzi
 
 Role: Matrix Analyst A (Role 3)
 
@@ -51,7 +67,7 @@ Verified matrix dimensions and state ordering before analysis.
 
 ## Member 4 
 
-Name: Nurul Najwa
+Name: Nurul Najwa Binti Mustafa
 
 Role: Matrix Analyst B (Role 4)	
 
@@ -74,7 +90,7 @@ Validated strict state-to-region mappings, cross-analyzed income-poverty paradox
 
 ##  Member 5
 
-Name: Nurul Khumairah
+Name: Nurul Khumairah Bt Sawlihim
 
 Role:  Intergration and Test Lead (Role 5)
 
