@@ -28,7 +28,7 @@ Issue found:
 
 ## Member 3
 
-Name: Naajiya
+Name: Nur Naajiya
 
 Role: Matrix Analyst A (Role 3)
 
