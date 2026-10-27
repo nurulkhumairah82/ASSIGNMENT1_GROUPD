@@ -17,3 +17,22 @@ Task 5.1
 
 Issue found:
 Verified matrix dimensions and state ordering before analysis.
+
+Name: Nurul Najwa
+
+Role: Matrix analyst B (Role 4)	
+
+Owned:
+
+Task 4.6 Regional Mean of Median Incomes
+Task 4.7 Paradox Period Analysis
+Task 5.1 Build State Profile Function
+
+Reviewed:
+Task 4.1 
+Task 4.2 
+Task 4.3
+Task 4.4
+Task 4.5
+
+
